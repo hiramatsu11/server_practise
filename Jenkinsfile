@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar repo'){
             steps {
-                git 'https://github.com/hiramatsu11/server_practise.git'
+                git branch: 'main', url: 'https://github.com/hiramatsu11/server_practise.git'
             }
         }
         stage('Ejecutar hello.py'){
