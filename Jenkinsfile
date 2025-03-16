@@ -20,9 +20,14 @@ pipeline {
                 '''
             }
         }
+        stage('Donde esta python3'){
+            steps {
+                sh 'which python3'
+            }
+        }
         stage('Ejecutar hello.py'){
             steps {
-                sh 'python3 hello.py'
+                sh '/usr/bin/python3 hello.py'
             }
         }
     }
